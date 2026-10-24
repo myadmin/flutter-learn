@@ -13,11 +13,8 @@ hero:
       text: 🚀 开始学习课程
       link: /guide/
     - theme: alt
-      text: 🛍️ 实战一：电商APP
+      text: 🛍️ 电商实战项目
       link: /project/
-    - theme: alt
-      text: 📚 实战二：电子书城
-      link: /ebook-project/
     - theme: alt
       text: 📺 B站课程直达 (103P)
       link: https://www.bilibili.com/video/BV1wR4Xz6EqG/

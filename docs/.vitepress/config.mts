@@ -19,8 +19,7 @@ export default defineConfig({
       { text: '导学指南', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'Dart核心语法', link: '/dart/', activeMatch: '^/dart/' },
       { text: 'Flutter核心组件', link: '/flutter-core/', activeMatch: '^/flutter-core/' },
-      { text: '实战一：电商APP', link: '/project/', activeMatch: '^/project/' },
-      { text: '实战二：电子书城', link: '/ebook-project/', activeMatch: '^/ebook-project/' },
+      { text: '电商实战项目', link: '/project/', activeMatch: '^/(project|ebook-project)/' },
       { text: '多端部署适配', link: '/multiplatform/', activeMatch: '^/multiplatform/' },
       {
         text: '课程原版视频',
@@ -69,7 +68,7 @@ export default defineConfig({
       ],
       '/project/': [
         {
-          text: '实战一：仿电商商城项目 (GetX架构)',
+          text: 'Day 3: 仿电商实战项目 (P80-P98)',
           items: [
             { text: '电商项目架构与Git版本管理 (P80-P81)', link: '/project/' },
             { text: '主页Tab切换与轮播图展示 (P82-P86)', link: '/project/home-and-tabs' },
@@ -78,11 +77,37 @@ export default defineConfig({
             { text: '个人中心与用户登录表单验证 (P93-P95)', link: '/project/profile-and-auth' },
             { text: 'GetX 全局状态、持久化与通用弹窗 (P96-P98)', link: '/project/getx-state-and-token' }
           ]
+        },
+        {
+          text: '进阶实战：豆瓣电子书城 APP (Provider架构)',
+          collapsed: false,
+          items: [
+            { text: '项目概述与技术架构全景', link: '/ebook-project/' },
+            { text: '工程规范、屏幕适配与明暗主题系统', link: '/ebook-project/architecture-and-screenutil' },
+            { text: '高颜值流光底部导航与懒加载堆栈', link: '/ebook-project/bottom-nav-and-lazystack' },
+            { text: 'Dio 网络封装与 HTML DOM 爬虫逆向工程', link: '/ebook-project/dio-and-spider-crawler' },
+            { text: '领域模型设计与 Provider MVVM 状态流转', link: '/ebook-project/model-and-provider-mvvm' },
+            { text: '微光流动骨架屏体系与高质感组件库', link: '/ebook-project/shimmer-skeleton-and-ui' },
+            { text: '图书详情页全景与阅读器沉浸式体验', link: '/ebook-project/book-detail-and-reader' }
+          ]
         }
       ],
       '/ebook-project/': [
         {
-          text: '实战二：豆瓣电子书城 APP (Provider架构)',
+          text: 'Day 3: 仿电商实战项目 (P80-P98)',
+          collapsed: true,
+          items: [
+            { text: '电商项目架构与Git版本管理 (P80-P81)', link: '/project/' },
+            { text: '主页Tab切换与轮播图展示 (P82-P86)', link: '/project/home-and-tabs' },
+            { text: '分类网格与特惠爆款推荐(AI辅助) (P87-P89)', link: '/project/category-and-recommend' },
+            { text: '推荐商品流下拉刷新与上拉加载 (P90-P92)', link: '/project/pull-refresh-infinite-scroll' },
+            { text: '个人中心与用户登录表单验证 (P93-P95)', link: '/project/profile-and-auth' },
+            { text: 'GetX 全局状态、持久化与通用弹窗 (P96-P98)', link: '/project/getx-state-and-token' }
+          ]
+        },
+        {
+          text: '进阶实战：豆瓣电子书城 APP (Provider架构)',
+          collapsed: false,
           items: [
             { text: '项目概述与技术架构全景', link: '/ebook-project/' },
             { text: '工程规范、屏幕适配与明暗主题系统', link: '/ebook-project/architecture-and-screenutil' },
