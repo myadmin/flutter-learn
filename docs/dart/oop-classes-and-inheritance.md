@@ -464,6 +464,11 @@ void main() {
 > **Flutter 源码中的 Mixin 典范**：
 > 在 Flutter 动画开发中，我们编写动态控制器时必须混入 `SingleTickerProviderStateMixin` 或 `TickerProviderStateMixin`，它就是通过 `mixin` 为我们的页面注入帧信号刷新驱动能力的！
 
+<DartConsole 
+  preset="oop" 
+  title="面向对象类继承、多态与 Mixin 混入执行演示" 
+/>
+
 ---
 
 ## 6. 面向对象综合实战：电商支付策略与优惠系统

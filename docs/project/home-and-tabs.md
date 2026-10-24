@@ -569,6 +569,12 @@ class _HomePageState extends State<HomePage> {
 }
 ```
 
+<FlutterPhonePreview 
+  type="ecommerce" 
+  title="仿电商首页搜索栏、轮播图与分类综合效果" 
+  appBarTitle="仿网易严选好物" 
+/>
+
 ---
 
 ## 7. 高频避坑指南

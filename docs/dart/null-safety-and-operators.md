@@ -104,6 +104,11 @@ retryCount ??= 5; // retryCount 已经是 3，跳过赋值
 print(retryCount); // 依然是 3
 ```
 
+<DartConsole 
+  preset="null-safety"
+  title="空安全运算符与兜底取值演示" 
+/>
+
 ### 2.5 延迟初始化修饰符：`late`
 
 在实际工程中，常有一些非空变量在声明时无法立即赋值，但保证在首次使用前一定会完成赋值（例如 Flutter 的 `State.initState()` 阶段、依赖注入框架、从配置文件读取等）。此时使用 `late` 修饰。

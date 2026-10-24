@@ -215,6 +215,11 @@ void main() {
 3. 微任务队列排空后，事件循环取出 Event Queue 中就绪的普通任务 `2` 执行；
 4. 计时器时间到达后，延时任务入队被取出执行，打印 `4`。
 
+<DartConsole 
+  preset="event-loop"
+  title="Event Loop 事件循环调度时序模拟" 
+/>
+
 ---
 
 ## 3. Future 核心与状态机 (P35)

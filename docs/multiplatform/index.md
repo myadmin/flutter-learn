@@ -285,6 +285,12 @@ void showAdaptiveAppDialog(BuildContext context, {required String title, require
 }
 ```
 
+<FlutterPhonePreview 
+  type="ecommerce" 
+  title="Flutter 跨端运行效果实机模拟 (iOS / Android / 鸿蒙)" 
+  appBarTitle="多端自适应电商体验" 
+/>
+
 ---
 
 ## 6. 多端适配避坑指南与最佳实践清单

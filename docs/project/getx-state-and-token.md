@@ -501,6 +501,12 @@ ListTile(
 );
 ```
 
+<FlutterPhonePreview 
+  type="tabs" 
+  title="全局状态驱动的底部 4 栏 Tab 切换实战" 
+  appBarTitle="电商项目 Tab 联动" 
+/>
+
 ---
 
 ## 7. 踩坑指南与最佳实践

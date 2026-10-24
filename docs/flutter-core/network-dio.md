@@ -248,6 +248,12 @@ class HttpUtil {
 }
 ```
 
+<FlutterPhonePreview 
+  type="dio" 
+  title="Dio 异步网络请求与加载状态联动演示" 
+  appBarTitle="Dio 网络请求实战" 
+/>
+
 ---
 
 ## 4. 数据 Model 实体序列化与反序列化 (P72)

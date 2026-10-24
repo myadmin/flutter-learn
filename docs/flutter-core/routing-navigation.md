@@ -147,6 +147,12 @@ class AddressSelectPage extends StatelessWidget {
 - **`Navigator.pushReplacement(context, newRoute)`**：销毁当前栈顶页面，并压入新页面替换它（例如：从“登录页”成功登录后跳转到“首页”，用户按返回键不会再次退回登录页）。
 - **`Navigator.pushAndRemoveUntil(context, newRoute, (route) => false)`**：清空整个路由历史栈，并将新页面置为全新的栈底（例如：“退出登录”后，清除所有已打开的历史页面，仅保留登录页）。
 
+<FlutterPhonePreview 
+  type="routing" 
+  title="Navigator 页面跳转与路由栈动态演示" 
+  appBarTitle="路由栈跳转 Demo" 
+/>
+
 ---
 
 ## 3. 命名路由体系声明与传参 (P76-P77)

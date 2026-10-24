@@ -489,6 +489,12 @@ class _BadPageState extends State<BadPage> {
 }
 ```
 
+<FlutterPhonePreview 
+  type="counter" 
+  title="StatefulWidget 与 setState 交互式渲染演示" 
+  appBarTitle="计数器 setState Demo" 
+/>
+
 ### 6.3 局部刷新的三大核心优化法则
 
 #### 法则 1：善用 `const` 构造函数

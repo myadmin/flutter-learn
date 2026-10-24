@@ -592,6 +592,12 @@ class _LoginPageState extends State<LoginPage> {
 }
 ```
 
+<FlutterPhonePreview 
+  type="login" 
+  title="用户登录与 Form 表单正则校验交互演示" 
+  appBarTitle="用户登录" 
+/>
+
 ---
 
 ## 4. 登录 API 服务层与 Mock 契约 (`lib/api/auth_api.dart`)

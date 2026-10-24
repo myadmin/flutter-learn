@@ -485,6 +485,12 @@ class CartBottomBar extends StatelessWidget {
 }
 ```
 
+<FlutterPhonePreview 
+  type="communication" 
+  title="父子组件通信与状态提升双向交互演示" 
+  appBarTitle="组件双向通信实战" 
+/>
+
 ---
 
 ## 5. 跨层级通信全景认知与技术选型

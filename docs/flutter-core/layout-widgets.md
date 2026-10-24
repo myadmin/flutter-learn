@@ -101,6 +101,12 @@ Widget buildVipCard() {
 }
 ```
 
+<FlutterPhonePreview 
+  type="container" 
+  title="Container 动态圆角与内边距修饰效果" 
+  appBarTitle="Container 容器样式调试" 
+/>
+
 ---
 
 ## 2. 对齐与内边距：Center, Align 与 Padding (P53)
@@ -319,6 +325,12 @@ Widget buildSearchBar() {
 }
 ```
 
+<FlutterPhonePreview 
+  type="flex" 
+  title="Row / Column / Expanded 弹性对齐可视化预览" 
+  appBarTitle="Flex 布局可视化" 
+/>
+
 ---
 
 ## 5. 流式布局：Wrap 与 Chip 标签折行实战 (P58)
@@ -488,6 +500,12 @@ Widget buildBadgedProductCard() {
   );
 }
 ```
+
+<FlutterPhonePreview 
+  type="wrap-stack" 
+  title="Wrap 自动折行标签与 Stack 绝对层叠效果" 
+  appBarTitle="Wrap & Stack 视图" 
+/>
 
 ---
 

@@ -372,6 +372,11 @@ void main() {
 }
 ```
 
+<DartConsole 
+  preset="control-flow" 
+  title="流程控制与高阶函数闭包执行演示" 
+/>
+
 ---
 
 ## 6. 函数知识点对比速查表
