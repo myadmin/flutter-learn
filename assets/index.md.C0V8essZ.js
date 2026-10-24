@@ -1,0 +1,29 @@
+import{_ as n,o as s,c as e,a2 as p}from"./chunks/framework.pJ3u_E8s.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"layout":"home","hero":{"name":"Flutter 全栈开发教程","text":"从 Dart 核心语法到电商项目实战与多端适配","tagline":"配套黑马程序员103集全套视频课程 · AI 辅助编程 · Android / iOS / 鸿蒙HarmonyOS / Web 全覆盖","image":{"src":"/logo.svg","alt":"Flutter Logo"},"actions":[{"theme":"brand","text":"🚀 开始学习课程","link":"/guide/"},{"theme":"alt","text":"🎯 Dart 语言精讲","link":"/dart/"},{"theme":"alt","text":"📺 B站课程直达 (103P)","link":"https://www.bilibili.com/video/BV1wR4Xz6EqG/"}]},"features":[{"icon":"🎯","title":"扎实的 Dart 核心功底 (Day 1)","details":"从基础变量、空安全、数据结构，到面向对象、类继承、接口、Mixin 混入，再到异步 Future 与事件循环，全方位打通 Dart 语言脉络。"},{"icon":"🧩","title":"体系化 Flutter 核心组件 (Day 2)","details":"深入解析 StatelessWidget 与 StatefulWidget 生命周期、各种排版布局、滚动视图、组件通信、Dio 网络请求封装与高级路由系统。"},{"icon":"🛍️","title":"真实仿电商实战项目 (Day 3)","details":"包含底部导航栏、轮播图、分类推荐、上拉加载、下拉刷新、用户登录验证、GetX 状态管理、Token 本地持久化与弹窗封装。"},{"icon":"🤖","title":"AI 辅助高效编码开发","details":"结合 Trae 编辑器及 AI 代码补全、协作生成模式，讲解如何利用 AI 工具进行代码排查、界面重构与业务逻辑快速生成。"},{"icon":"📱","title":"全平台多端部署与适配","details":"不仅包含常规的 Web 与 Android 原生打包，还涵盖 Mac/iOS 运行调试以及华为鸿蒙 HarmonyOS 侧 Flutter 跨端实战。"},{"icon":"📖","title":"结构清晰的配套文档网站","details":"严格对应 103 集视频分 P 结构，代码片段详尽、避坑指南完备、图文并茂，非常适合自学打卡与日常速查。"}]},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),t={name:"index.md"};function l(i,a,c,o,r,d){return s(),e("div",null,[...a[0]||(a[0]=[p(`<h2 id="课程体系大纲路线" tabindex="-1">课程体系大纲路线 <a class="header-anchor" href="#课程体系大纲路线" aria-label="Permalink to &quot;课程体系大纲路线&quot;">​</a></h2><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Flutter 全栈开发与实战 (共 103 集)</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>├── 🚀 导学与基础准备篇 (P1 - 环境概览)</span></span>
+<span class="line"><span>│   ├── Flutter 跨平台愿景与核心架构</span></span>
+<span class="line"><span>│   └── Dart &amp; Flutter SDK 安装与 VSCode/Trae 插件配置</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>├── 📘 第一阶段：Dart 编程语言基础与进阶 (P2 - P37)</span></span>
+<span class="line"><span>│   ├── 变量、常量、String / num / bool / List / Map / dynamic</span></span>
+<span class="line"><span>│   ├── 空安全机制 (Null Safety)、各类运算符与分支循环</span></span>
+<span class="line"><span>│   ├── 函数定义、可选命名参数、箭头函数与闭包</span></span>
+<span class="line"><span>│   ├── 面向对象：类、构造函数语法糖、继承、多态、接口与 Mixin</span></span>
+<span class="line"><span>│   └── 泛型、异步编程、Future 链式调用与 async/await</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>├── 📱 第二阶段：Flutter 核心框架与组件实战 (P38 - P79)</span></span>
+<span class="line"><span>│   ├── 项目创建、目录结构剖析、runApp 与 Widget 本质</span></span>
+<span class="line"><span>│   ├── MaterialApp、Scaffold 脚手架与无状态/有状态生命周期</span></span>
+<span class="line"><span>│   ├── 布局体系：Container、Padding、Row、Column、Flex、Wrap、Stack</span></span>
+<span class="line"><span>│   ├── UI与滚动：Text、Image、TextField、ListView、GridView、CustomScrollView</span></span>
+<span class="line"><span>│   ├── 组件通信：父传子、子传父与状态提升</span></span>
+<span class="line"><span>│   ├── 网络请求：Dio 基础与拦截器封装、Web 端跨域处理</span></span>
+<span class="line"><span>│   └── 路由管理：基本路由、命名路由传参、404 与路由守卫拦截</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>└── 🛍️ 第三阶段：仿电商实战项目与多端适配 (P80 - P103)</span></span>
+<span class="line"><span>    ├── 项目搭建、Git 管理与 TabBar 底部导航</span></span>
+<span class="line"><span>    ├── 首页布局、Banner 轮播图与分类推荐网格 (结合 AI 辅助)</span></span>
+<span class="line"><span>    ├── 下拉刷新、上拉加载更多、GlobalKey 与轻提示</span></span>
+<span class="line"><span>    ├── 我的页面布局、登录表单校验与身份验证</span></span>
+<span class="line"><span>    ├── GetX 响应式状态管理、Token 本地持久化与通用弹窗封装</span></span>
+<span class="line"><span>    └── 多端适配：Android 打包运行、iOS 编译调试、HarmonyOS 鸿蒙适配</span></span></code></pre></div>`,2)])])}const _=n(t,[["render",l]]);export{m as __pageData,_ as default};
