@@ -6,7 +6,7 @@ hero:
   text: "从 Dart 核心语法到电商项目实战与多端适配"
   tagline: "配套黑马程序员103集全套视频课程 · AI 辅助编程 · Android / iOS / 鸿蒙HarmonyOS / Web 全覆盖"
   image:
-    src: https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg
+    src: /logo.svg
     alt: Flutter Logo
   actions:
     - theme: brand

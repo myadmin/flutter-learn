@@ -1,7 +1,7 @@
 # Flutter 全栈自学教程网 🚀
 
 <p align="center">
-  <img src="https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg" width="120" alt="Flutter Logo" />
+  <img src="./docs/public/logo.svg" width="120" alt="Flutter Logo" />
 </p>
 
 <p align="center">

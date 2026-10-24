@@ -6,13 +6,13 @@ export default defineConfig({
   lang: 'zh-CN',
   base: process.env.BASE_PATH || (process.env.GITHUB_ACTIONS ? '/flutter-learn/' : '/'),
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#02569B' }],
     ['meta', { name: 'author', content: 'Antigravity Team' }],
     ['meta', { name: 'keywords', content: 'Flutter, Dart, VitePress, Android, iOS, HarmonyOS, Web, 黑马程序员' }]
   ],
   themeConfig: {
-    logo: 'https://storage.googleapis.com/cms-storage-bucket/4fd5520fe28ebf839174.svg',
+    logo: '/logo.svg',
     siteTitle: 'Flutter 教程网',
     nav: [
       { text: '首页', link: '/' },
