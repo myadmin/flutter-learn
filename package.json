@@ -1,0 +1,24 @@
+{
+  "name": "flutter-course-docs",
+  "version": "1.0.0",
+  "description": "基于黑马程序员Flutter从入门到实战全套教程的在线学习文档网站",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "flutter",
+    "dart",
+    "vitepress",
+    "harmonyos",
+    "android",
+    "ios",
+    "web"
+  ],
+  "author": "Antigravity Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
