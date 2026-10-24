@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>基于黑马程序员《Flutter从入门到实战全套视频教程》（BV1wR4Xz6EqG，共103集）全量制作的现代化 VitePress 在线学习网站</strong>
+  <strong>基于黑马程序员《Flutter从入门到实战全套视频教程》（BV1wR4Xz6EqG，共103集）与《【Flutter】电子书城APP实战》（BV1dpg5eSETx）全量制作的现代化 VitePress 在线学习网站</strong>
 </p>
 
 <p align="center">
@@ -20,7 +20,9 @@
 ## 🌐 在线访问
 
 - **GitHub Pages 在线教程地址**：[https://myadmin.github.io/flutter-learn/](https://myadmin.github.io/flutter-learn/)
-- **B站官方原版视频课程**：[黑马程序员 Flutter 从入门到实战 (BV1wR4Xz6EqG)](https://www.bilibili.com/video/BV1wR4Xz6EqG/)
+- **B站官方教程课程 (103集)**：[黑马程序员 Flutter 从入门到实战 (BV1wR4Xz6EqG)](https://www.bilibili.com/video/BV1wR4Xz6EqG/)
+- **B站进阶实战视频**：[【Flutter】电子书城APP - 你的豆瓣阅读也可能是电子书城 (BV1dpg5eSETx)](https://www.bilibili.com/video/BV1dpg5eSETx/)
+- **开源项目源码**：[SX-Code/ebook (GitHub)](https://github.com/SX-Code/ebook)
 
 ---
 
@@ -48,13 +50,24 @@
 - **P70-P73**: [网络请求与 Dio 封装 (单例 DioClient、请求拦截器、Chrome 跨域联调)](docs/flutter-core/network-dio.md)
 - **P74-P79**: [路由与导航体系 (Navigator 1.0、命名路由、动态拦截器 onGenerateRoute、404兜底)](docs/flutter-core/routing-navigation.md)
 
-### 4. Day 3: 仿网易严选电商项目与多端部署 (P80 - P103)
+### 4. Day 3: 实战一·仿网易严选电商项目 (GetX架构) (P80 - P98)
 - **P80-P81**: [Web 架构搭建与 Git 规范 (分层设计：models/views/controllers/services)](docs/project/index.md)
 - **P82-P86**: [主页架构与轮播 Banner (IndexedStack 状态持久化、PageView 自动轮播、渐变搜索栏)](docs/project/home-and-tabs.md)
 - **P87-P89**: [AI 辅助分类与爆款推荐 (Trae / AI 辅助开发 Prompt 公式、金刚区网格、不对称特惠)](docs/project/category-and-recommend.md)
 - **P90-P92**: [下拉刷新与无限滚动加载 (RefreshIndicator、ScrollController 触底监听、GlobalKey)](docs/project/pull-refresh-infinite-scroll.md)
 - **P93-P95**: [个人中心与登录表单验证 (沉浸式 Header、Form 正则验证、密码安全切换)](docs/project/profile-and-auth.md)
 - **P96-P98**: [GetX 响应式状态与 Token 自动持久化 (shared_preferences、无感知鉴权注入)](docs/project/getx-state-and-token.md)
+
+### 5. 进阶拓展：实战二·豆瓣电子书城 APP 实战 (Provider + 爬虫逆向)
+- [1. 电子书城项目概述与架构设计全景](docs/ebook-project/index.md)
+- [2. 项目目录规范、屏幕适配与明暗主题系统 (`flutter_screenutil` + `ThemeProvider`)](docs/ebook-project/architecture-and-screenutil.md)
+- [3. 高颜值流光底部导航与懒加载堆栈 (`SalomonBottomBar` + `LazyLoadIndexedStack`)](docs/ebook-project/bottom-nav-and-lazystack.md)
+- [4. Dio 网络客户端封装与 HTML DOM 爬虫逆向工程 (`package:html` 解析豆瓣读书/阅读)](docs/ebook-project/dio-and-spider-crawler.md)
+- [5. 领域模型建模与 Provider MVVM 状态流转 (`ChangeNotifierProvider` + `Consumer`)](docs/ebook-project/model-and-provider-mvvm.md)
+- [6. 微光流动骨架屏体系与高质感组件库 (`shimmer` Skeletons + `BlurryContainer`)](docs/ebook-project/shimmer-skeleton-and-ui.md)
+- [7. 图书详情页全景与阅读器沉浸式体验 (透明渐变 AppBar、评分条、书架收藏)](docs/ebook-project/book-detail-and-reader.md)
+
+### 6. 多端适配与打包部署 (P99 - P103)
 - **P99-P100**: [Android 环境配置与 Release APK 打包真机调试](docs/multiplatform/android.md)
 - **P101**: [iOS 平台部署与 Xcode 模拟器/真机签名运行](docs/multiplatform/ios.md)
 - **P102**: [HarmonyOS NEXT 鸿蒙侧跨端开发与真机调试避坑](docs/multiplatform/harmonyos.md)

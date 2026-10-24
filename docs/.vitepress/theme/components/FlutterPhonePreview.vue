@@ -341,6 +341,127 @@
               </div>
             </div>
 
+            <!-- 预置类型 11: 电子书城综合主页 (SalomonBottomBar + 骨架屏联动) -->
+            <div v-else-if="type === 'ebook'" class="demo-ebook-screen">
+              <!-- 顶部搜索框与主题切换 -->
+              <div class="ebook-search-bar">
+                <span class="search-icon">🔍</span>
+                <span class="search-placeholder">搜索书名、作者或 ISBN...</span>
+                <span class="theme-badge" @click="toggleDark">
+                  {{ isDark ? '🌙' : '☀️' }}
+                </span>
+              </div>
+
+              <!-- 微光骨架屏切换开关 -->
+              <div class="skeleton-toggle-bar">
+                <span class="skeleton-label">加载状态：</span>
+                <button class="mini-toggle-btn" :class="{ active: isSkeleton }" @click="isSkeleton = !isSkeleton">
+                  {{ isSkeleton ? '微光骨架占位 (Shimmer)' : '真实数据已渲染' }}
+                </button>
+              </div>
+
+              <!-- 骨架屏状态 -->
+              <div v-if="isSkeleton" class="ebook-skeleton-list">
+                <div v-for="i in 3" :key="i" class="shimmer-card">
+                  <div class="shimmer-cover"></div>
+                  <div class="shimmer-info">
+                    <div class="shimmer-line title"></div>
+                    <div class="shimmer-line sub"></div>
+                    <div class="shimmer-line meta"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 真实数据状态 -->
+              <div v-else class="ebook-real-list">
+                <!-- Salomon Tab 0: 首页 -->
+                <div v-if="ebookTab === 0" class="ebook-page-home">
+                  <!-- 活动卡片 -->
+                  <div class="ebook-banner-card">
+                    <div class="banner-tag">豆瓣高分精选</div>
+                    <div class="banner-title">2026 年度非虚构图书榜单</div>
+                    <div class="banner-desc">深度解析当代心理与科技变革</div>
+                  </div>
+
+                  <!-- 推荐书籍流 -->
+                  <div class="ebook-section-title">
+                    <span>📖 今日编辑重磅推荐</span>
+                    <span class="more-link">全部 →</span>
+                  </div>
+
+                  <div class="ebook-book-item" v-for="b in ebookBooks" :key="b.id">
+                    <div class="book-cover-wrap" :style="{ background: b.coverColor }">
+                      <span class="book-mini-title">{{ b.title.slice(0, 4) }}</span>
+                    </div>
+                    <div class="book-details">
+                      <div class="book-item-title">{{ b.title }}</div>
+                      <div class="book-author">{{ b.author }} · {{ b.category }}</div>
+                      <div class="book-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="score">{{ b.score }}</span>
+                        <span class="review-count">({{ b.reviews }}评)</span>
+                      </div>
+                      <div class="book-desc-short">{{ b.desc }}</div>
+                    </div>
+                    <button class="read-btn" :class="{ shelved: inShelf[b.title] }" @click="shelfBook(b.title)">
+                      {{ inShelf[b.title] ? '✓ 已在书架' : '+ 书架' }}
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Salomon Tab 1: 豆瓣读书 -->
+                <div v-else-if="ebookTab === 1" class="ebook-page-content">
+                  <div class="ebook-section-title">📚 豆瓣读书 Top 250 榜单</div>
+                  <div class="chart-rank-item" v-for="(r, idx) in ['百年孤独', '红楼梦', '1984', '三体全集']" :key="r">
+                    <span class="rank-badge">{{ idx + 1 }}</span>
+                    <span class="rank-name">{{ r }}</span>
+                    <span class="rank-score">9.{{ 7 - idx }} 分</span>
+                  </div>
+                </div>
+
+                <!-- Salomon Tab 2: 电子书城 -->
+                <div v-else-if="ebookTab === 2" class="ebook-page-content">
+                  <div class="ebook-section-title">🏷️ 电子书热门分类</div>
+                  <div class="category-chips">
+                    <span class="chip" v-for="c in ['科幻未来', '悬疑推理', '社会学', '商业理财', '计算机编程', '心理学']" :key="c">
+                      {{ c }}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Salomon Tab 3: 我的 -->
+                <div v-else class="ebook-page-content">
+                  <div class="ebook-section-title">🔖 我的个人书架</div>
+                  <div class="shelf-stats">
+                    已加入 <strong>{{ Object.keys(inShelf).length }}</strong> 本书籍
+                  </div>
+                  <div v-if="Object.keys(inShelf).length === 0" class="empty-shelf">
+                    书架空空如也，快去首页加入喜欢的电子书吧！
+                  </div>
+                  <div v-else class="shelf-list">
+                    <div v-for="name in Object.keys(inShelf)" :key="name" class="shelf-item">
+                      <span>📖 {{ name }}</span>
+                      <span class="read-now-btn">开始阅读</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SalomonBottomBar 气泡导航 -->
+              <div class="salomon-bottom-bar">
+                <div 
+                  v-for="(item, idx) in salomonItems" 
+                  :key="item.text"
+                  class="salomon-item"
+                  :class="{ active: ebookTab === idx }"
+                  @click="ebookTab = idx"
+                >
+                  <span class="salomon-icon">{{ item.icon }}</span>
+                  <span v-if="ebookTab === idx" class="salomon-text">{{ item.text }}</span>
+                </div>
+              </div>
+            </div>
+
             <!-- 默认/自定义 Slot -->
             <div v-else class="demo-custom-screen">
               <slot></slot>
@@ -370,7 +491,7 @@ const props = withDefaults(
     title?: string
     appBarTitle?: string
     appBarColor?: string
-    type?: 'counter' | 'container' | 'flex' | 'wrap-stack' | 'communication' | 'dio' | 'routing' | 'ecommerce' | 'login' | 'tabs' | 'custom'
+    type?: 'counter' | 'container' | 'flex' | 'wrap-stack' | 'communication' | 'dio' | 'routing' | 'ecommerce' | 'login' | 'tabs' | 'ebook' | 'custom'
     hasBack?: boolean
   }>(),
   {
@@ -467,6 +588,59 @@ const handleLogin = () => {
 // 10. Tabs 状态
 const activeTab = ref(0)
 
+// 11. EBook 电子书城状态
+const ebookTab = ref(0)
+const isSkeleton = ref(false)
+const inShelf = ref<Record<string, boolean>>({
+  '百年孤独': true
+})
+const salomonItems = [
+  { icon: '🏠', text: '首页' },
+  { icon: '📖', text: '豆瓣读书' },
+  { icon: '🛍️', text: '电子书城' },
+  { icon: '👤', text: '我的' }
+]
+const ebookBooks = ref([
+  {
+    id: 1,
+    title: '三体：地球往事',
+    author: '刘慈欣',
+    category: '科幻未来',
+    score: '9.4',
+    reviews: '48.2万',
+    desc: '中国科幻文学里程碑之作，文化大革命如火如荼进行之际，军方探寻外星文明...',
+    coverColor: '#1a365d'
+  },
+  {
+    id: 2,
+    title: '蛤蟆先生去看心理医生',
+    author: '罗伯特·戴博德',
+    category: '心理成长',
+    score: '8.5',
+    reviews: '23.6万',
+    desc: '英国经典心理咨询普及读本，借由童话人物的互动，生动展现抑郁与情绪转变全过程...',
+    coverColor: '#2b6cb0'
+  },
+  {
+    id: 3,
+    title: '悉达多',
+    author: '赫尔曼·黑塞',
+    category: '经典哲学',
+    score: '9.2',
+    reviews: '19.8万',
+    desc: '古印度贵族青年悉达多追寻自我灵魂解脱的漫漫求道之旅，诺贝尔文学奖得主代表作...',
+    coverColor: '#744210'
+  }
+])
+
+const shelfBook = (title: string) => {
+  if (inShelf.value[title]) {
+    delete inShelf.value[title]
+  } else {
+    inShelf.value[title] = true
+  }
+}
+
 // 公用重置
 const resetState = () => {
   counter.value = 0
@@ -477,6 +651,8 @@ const resetState = () => {
   totalBuyCount.value = 1
   currentRoute.value = 'home'
   activeTab.value = 0
+  ebookTab.value = 0
+  isSkeleton.value = false
   loginPassword.value = ''
   loginError.value = ''
   loginSuccess.value = false
@@ -1346,6 +1522,368 @@ const triggerAction = () => { alert('触发 AppBar 顶部操作') }
 
 .nav-text {
   font-size: 10px;
+}
+
+/* 11. EBook 电子书城样式 */
+.demo-ebook-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 12px;
+}
+
+.ebook-search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 6px 10px;
+  border-radius: 18px;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.ebook-search-bar .search-icon {
+  font-size: 12px;
+}
+
+.ebook-search-bar .search-placeholder {
+  flex: 1;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.theme-badge {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  font-size: 11px;
+}
+
+.skeleton-toggle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  background: rgba(2, 86, 155, 0.06);
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.mini-toggle-btn {
+  border: 1px solid #02569B;
+  background: transparent;
+  color: #02569B;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mini-toggle-btn.active {
+  background: #02569B;
+  color: white;
+}
+
+/* 微光流动骨架屏 */
+.ebook-skeleton-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shimmer-card {
+  display: flex;
+  gap: 10px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.shimmer-cover {
+  width: 50px;
+  height: 70px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.shimmer-line {
+  height: 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-line.title { width: 70%; height: 14px; }
+.shimmer-line.sub { width: 50%; }
+.shimmer-line.meta { width: 40%; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.ebook-real-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ebook-banner-card {
+  background: linear-gradient(135deg, #1e3a8a, #0284c7);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+}
+
+.banner-tag {
+  font-size: 9px;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.banner-title {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.banner-desc {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.ebook-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.more-link {
+  font-size: 10px;
+  color: #0284c7;
+  font-weight: normal;
+}
+
+.ebook-book-item {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  align-items: center;
+}
+
+.book-cover-wrap {
+  width: 44px;
+  height: 62px;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 2px;
+  line-height: 1.2;
+}
+
+.book-details {
+  flex: 1;
+}
+
+.book-item-title {
+  font-weight: bold;
+  font-size: 12px;
+  color: inherit;
+}
+
+.book-author {
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+.book-rating .score {
+  font-weight: bold;
+  color: #eab308;
+}
+
+.book-rating .review-count {
+  color: #94a3b8;
+}
+
+.book-desc-short {
+  font-size: 9px;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+  margin-top: 2px;
+}
+
+.read-btn {
+  font-size: 10px;
+  border: 1px solid #0284c7;
+  color: #0284c7;
+  background: transparent;
+  padding: 3px 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.read-btn.shelved {
+  background: #0284c7;
+  color: white;
+}
+
+.chart-rank-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  gap: 10px;
+}
+
+.rank-badge {
+  background: #eab308;
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.rank-name {
+  flex: 1;
+  font-weight: bold;
+}
+
+.rank-score {
+  color: #eab308;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.chip {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 11px;
+}
+
+.shelf-stats {
+  font-size: 11px;
+  margin-bottom: 8px;
+  color: #64748b;
+}
+
+.empty-shelf {
+  padding: 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.shelf-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shelf-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.read-now-btn {
+  color: #0284c7;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Salomon 现代流光气泡底部栏 */
+.salomon-bottom-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 6px 4px 2px;
+  background: inherit;
+}
+
+.salomon-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 11px;
+  color: #64748b;
+}
+
+.salomon-item.active {
+  background: rgba(2, 132, 199, 0.12);
+  color: #0284c7;
+  font-weight: bold;
 }
 
 @keyframes spin {

@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "Flutter 全栈开发教程"
-  text: "从 Dart 核心语法到电商项目实战与多端适配"
-  tagline: "配套黑马程序员103集全套视频课程 · AI 辅助编程 · Android / iOS / 鸿蒙HarmonyOS / Web 全覆盖"
+  text: "从 Dart 核心语法到电商与电子书城双实战，再到多端适配部署"
+  tagline: "配套黑马程序员103集全套视频课程 · 双大厂级实战项目 · AI 辅助编程 · Android / iOS / 鸿蒙HarmonyOS / Web 全覆盖"
   image:
     src: /logo.svg
     alt: Flutter Logo
@@ -13,8 +13,11 @@ hero:
       text: 🚀 开始学习课程
       link: /guide/
     - theme: alt
-      text: 🎯 Dart 语言精讲
-      link: /dart/
+      text: 🛍️ 实战一：电商APP
+      link: /project/
+    - theme: alt
+      text: 📚 实战二：电子书城
+      link: /ebook-project/
     - theme: alt
       text: 📺 B站课程直达 (103P)
       link: https://www.bilibili.com/video/BV1wR4Xz6EqG/
@@ -27,17 +30,17 @@ features:
     title: 体系化 Flutter 核心组件 (Day 2)
     details: 深入解析 StatelessWidget 与 StatefulWidget 生命周期、各种排版布局、滚动视图、组件通信、Dio 网络请求封装与高级路由系统。
   - icon: 🛍️
-    title: 真实仿电商实战项目 (Day 3)
-    details: 包含底部导航栏、轮播图、分类推荐、上拉加载、下拉刷新、用户登录验证、GetX 状态管理、Token 本地持久化与弹窗封装。
-  - icon: 🤖
-    title: AI 辅助高效编码开发
-    details: 结合 Trae 编辑器及 AI 代码补全、协作生成模式，讲解如何利用 AI 工具进行代码排查、界面重构与业务逻辑快速生成。
+    title: 实战一：仿电商商城项目 (GetX)
+    details: 包含底部导航栏、轮播图、分类推荐、上拉加载、下拉刷新、用户登录验证、GetX 响应式状态管理、Token 本地持久化与通用弹窗封装。
+  - icon: 📚
+    title: 实战二：豆瓣电子书城 APP (Provider)
+    details: 基于豆瓣阅读/读书真实生态，涵盖 HTML DOM 爬虫逆向提取、Provider MVVM 状态流转、微光骨架屏动效、明暗主题与懒加载导航。
   - icon: 📱
     title: 全平台多端部署与适配
     details: 不仅包含常规的 Web 与 Android 原生打包，还涵盖 Mac/iOS 运行调试以及华为鸿蒙 HarmonyOS 侧 Flutter 跨端实战。
-  - icon: 📖
-    title: 结构清晰的配套文档网站
-    details: 严格对应 103 集视频分 P 结构，代码片段详尽、避坑指南完备、图文并茂，非常适合自学打卡与日常速查。
+  - icon: 💻
+    title: 内置交互式代码与真机模拟器
+    details: 网页内嵌手机模拟器与 Dart 交互式控制台，支持代码实时效果预览、状态变更查看与核心逻辑验证。
 ---
 
 <style>
@@ -72,11 +75,20 @@ Flutter 全栈开发与实战 (共 103 集)
 │   ├── 网络请求：Dio 基础与拦截器封装、Web 端跨域处理
 │   └── 路由管理：基本路由、命名路由传参、404 与路由守卫拦截
 │
-└── 🛍️ 第三阶段：仿电商实战项目与多端适配 (P80 - P103)
-    ├── 项目搭建、Git 管理与 TabBar 底部导航
-    ├── 首页布局、Banner 轮播图与分类推荐网格 (结合 AI 辅助)
-    ├── 下拉刷新、上拉加载更多、GlobalKey 与轻提示
-    ├── 我的页面布局、登录表单校验与身份验证
-    ├── GetX 响应式状态管理、Token 本地持久化与通用弹窗封装
-    └── 多端适配：Android 打包运行、iOS 编译调试、HarmonyOS 鸿蒙适配
+├── 🛍️ 第三阶段：仿电商实战项目与多端适配 (P80 - P103)
+│   ├── 项目搭建、Git 管理与 TabBar 底部导航
+│   ├── 首页布局、Banner 轮播图与分类推荐网格 (结合 AI 辅助)
+│   ├── 下拉刷新、上拉加载更多、GlobalKey 与轻提示
+│   ├── 我的页面布局、登录表单校验与身份验证
+│   ├── GetX 响应式状态管理、Token 本地持久化与通用弹窗封装
+│   └── 多端适配：Android 打包运行、iOS 编译调试、HarmonyOS 鸿蒙适配
+│
+└── 📚 拓展阶段：豆瓣电子书城 APP 实战 (进阶实战二)
+    ├── 项目概述、架构分层与 flutter_screenutil 屏幕自适应 (375x812)
+    ├── ThemeProvider 明暗双主题系统与高颜值 SalomonBottomBar 导航栏
+    ├── 懒加载堆栈 LazyLoadIndexedStack 解决多Tab性能开销
+    ├── Dio + package:html 豆瓣阅读 & 豆瓣读书 HTML DOM 爬虫逆向工程
+    ├── 领域实体建模与 Provider (6.1.2) MVVM 响应式状态驱动
+    ├── 7套业务组件与微光流动骨架屏 (Shimmer Skeletons) 体系封装
+    └── 沉浸式图书详情页、星级评分条、书架收藏与轻量级阅读器
 ```
