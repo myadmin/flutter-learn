@@ -1,9 +1,11 @@
-# 分类网格与特惠爆款推荐(AI辅助) (P87-P89)
+﻿# 分类网格与特惠爆款推荐(AI辅助) (P87-P89)
 
 在现代化软件工程中，AI 辅助编程（如 Trae、Cursor、GitHub Copilot）已经成为提升 Flutter 客户端开发效能的核心利器。在第 87 至 89 集教程中，我们将结合 **Trae / AI 智能辅助工具**，以“人机协作”的高效模式，快速构建电商首页的核心楼层：
 1. **金刚区 10 格商品分类网格**（Category Grid）；
 2. **特惠推荐专区**（Special Offer Promotion Floor，包含左大右小不对称布局与限时秒杀倒计时）；
 3. **爆款推荐与一站买全横向滑块**（Horizontal Hot Goods Stream）。
+
+<BiliVideoPlayer episodes="87-89" :p="87" />
 
 ---
 

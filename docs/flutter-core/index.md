@@ -1,8 +1,10 @@
-# Flutter 项目架构与目录结构 (P38-P41)
+﻿# Flutter 项目架构与目录结构 (P38-P41)
 
 欢迎来到 Flutter 核心框架与基础组件学习模块！在第一阶段掌握了 Dart 3.x 语法之后，我们正式迈入真正的跨平台 UI 开发世界。
 
 Flutter 是 Google 推出的开源跨平台应用开发框架，支持一套代码构建高性能、高保真的 Android、iOS、Web、Desktop (Windows/macOS/Linux) 以及鸿蒙应用。本章将从跨平台底层渲染机制出发，详解开发环境诊断、标准项目创建、企业级目录剖析、启动入口 `runApp` 的本质，以及 Flutter“一切皆 Widget”的核心设计哲学。
+
+<BiliVideoPlayer episodes="38-41" :p="38" />
 
 ---
 

@@ -10,6 +10,8 @@
 - **CustomScrollView 与 Slivers**（吸顶 AppBar、折叠视差特效）
 - **PageView 与 PageController**（全屏轮播与分页滑动）
 
+<BiliVideoPlayer episodes="60-67" :p="60" />
+
 ---
 
 ## 1. Text 与 TextStyle 富文本排版 (P60)

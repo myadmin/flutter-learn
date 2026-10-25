@@ -1,6 +1,8 @@
-# 核心脚手架与组件生命周期 (P42-P50)
+﻿# 核心脚手架与组件生命周期 (P42-P50)
 
 在上一章中，我们建立了“一切皆 Widget”的核心心智模型。本章我们将聚焦 Flutter 界面开发最重要的骨架组件 —— **MaterialApp 与 Scaffold**，深入探究 **StatelessWidget（无状态组件）** 与 **StatefulWidget（有状态组件）** 的本质区别，完整剖析 **State 对象的八大生命周期流程**，掌握手势点击交互（GestureDetector vs InkWell），并学习 setState 的底层渲染机制与局部刷新性能优化技巧。
+
+<BiliVideoPlayer episodes="42-50" :p="42" />
 
 ---
 

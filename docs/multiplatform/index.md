@@ -1,10 +1,12 @@
-# Flutter 多端适配全景与完结概述 (P103)
+﻿# Flutter 多端适配全景与完结概述 (P103)
 
 Flutter 自诞生之初，最震撼业界的愿景便是：**“一套代码，跨端自绘，处处运行（Multi-Platform from a single codebase）”**。
 
 在如今的工业界应用研发中，单一的移动端 App 已经难以满足全场景业务需求。企业需要应用能够无缝运行在 **Android 手机、iPhone、iPad、Web 浏览器、Windows / macOS 桌面端**，以及近年来爆发式增长的 **华为 HarmonyOS 鸿蒙生态**。
 
 本篇作为“多端适配与打包部署”的开篇总览与课程收官总结（对应视频第 103 集及完结），将深度剖析 Flutter 多端运行的底层架构原理、运行时平台精准判断、屏幕分辨率响应式自适应策略以及多端设计风格的适配原则。
+
+<BiliVideoPlayer episodes="103" :p="103" />
 
 ---
 

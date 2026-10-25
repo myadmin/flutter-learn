@@ -1,4 +1,4 @@
-# 组件间通信与状态提升 (P68-P69)
+﻿# 组件间通信与状态提升 (P68-P69)
 
 在 Flutter 声明式 UI 架构中，UI 是状态的函数（$UI = f(state)$）。随着应用业务逐渐复杂，将所有代码塞在单个页面中会导致维护灾难。我们必须将界面拆解为高内聚、职责单一的细粒度组件。
 
@@ -10,6 +10,8 @@
 3. **子传父（Child to Parent）**：回调函数（VoidCallback、ValueChanged）与闭包通知机制
 4. **状态提升模式（Lifting State Up）**：解决兄弟组件数据共享的经典架构模式与购物车实战
 5. **跨层级通信全景认知**：状态提升 vs InheritedWidget / Provider / GetX 的选型时机
+
+<BiliVideoPlayer episodes="68-69" :p="68" />
 
 ---
 

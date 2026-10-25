@@ -4,6 +4,8 @@
 > 🔗 **官方开源源码**：[SX-Code/ebook (GitHub)](https://github.com/SX-Code/ebook)  
 > 💡 **核心定位**：从传统的 RESTful JSON 接口跨越到 **HTML DOM 逆向爬虫、Provider 响应式 MVVM 架构、微光流动骨架屏 (Shimmer) 与明暗双主题自适应** 的进阶企业级实战。
 
+<BiliVideoPlayer bvid="BV1dpg5eSETx" :p="1" />
+
 ---
 
 ## 1. 为什么选择“电子书城”作为进阶实战？

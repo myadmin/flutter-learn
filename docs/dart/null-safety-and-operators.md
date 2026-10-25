@@ -1,8 +1,10 @@
-# 空安全机制与运算符 (P13-P15)
+﻿# 空安全机制与运算符 (P13-P15)
 
 在现代软件开发中，**空指针异常（Null Reference Exception）** 被发明者 Tony Hoare 戏称为其**“十亿美元的重大错误”**。长期以来，Java 的 `NullPointerException` 或 JavaScript 的 `TypeError: Cannot read properties of undefined` 占据了线上崩溃排行榜的前列。
 
 Dart 从 2.12 开始全面引入、并在 Dart 3.0 中彻底强制推行了**健全空安全（Sound Null Safety）**。本篇系统讲解空安全的底层机制、核心操作符以及 Dart 丰富的运算符生态（对应视频 P13 至 P15 集）。
+
+<BiliVideoPlayer episodes="13-15" :p="13" />
 
 ---
 

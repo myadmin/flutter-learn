@@ -1,10 +1,12 @@
-# HarmonyOS 鸿蒙侧跨端开发与运行 (P102)
+﻿# HarmonyOS 鸿蒙侧跨端开发与运行 (P102)
 
 在 2024 年以来的中国移动互联产业变革中，**华为 HarmonyOS NEXT（纯血鸿蒙）** 的横空出世成为了最具里程碑意义的事件。纯血鸿蒙全面剥离了传统的 Linux 内核与 AOSP（Android 开源项目）代码，底层采用全自研鸿蒙内核与系统架构。这意味着：**Android APK 将无法直接在纯血鸿蒙系统上运行，企业必须拥有鸿蒙原生应用！**
 
 面对各大企业巨大的跨平台业务迁移诉求，OpenHarmony 开源社区与华为官方联合成立了 **Flutter 鸿蒙 SIG 组**，全力推进 Flutter 对 OpenHarmony / HarmonyOS 的原生适配。
 
 本篇作为全套课程的核心跨端实战篇（对应视频第 102 集），将带你深入了解 Flutter 鸿蒙化方案、配置 DevEco Studio 开发工具链、生成鸿蒙工程骨架，并完成在鸿蒙模拟器与真机上的运行调试与避坑排障！
+
+<BiliVideoPlayer episodes="102" :p="102" />
 
 ---
 
